@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #0d1117;
+    color: #e8e8e8;
+    overflow-x: hidden;
+}
+
+/* -------------------------
+   HERO SECTION
+------------------------- */
+.hero {
+    padding: 120px 20px 60px;
+    text-align: center;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1ed1b7;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.411);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* -------------------------
+   CARD GRID
+------------------------- */
+.stats-section {
+    padding: 40px 30px;
+}
+
+
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 80px;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.4);
+    transition: 0.25s;
+    width: 100%;
+    height: auto;         
+    min-height: 350px;    
+}
+
+canvas {
+    width: 100%;
+    max-width: 100%;      
+    height: 180px !important;
+    display: block;
+}
+
+
+.card:hover {
+    
+    border-color: #0d695b;
+}
+
+ .card a{
+    color: #1ed1b7 !important;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+
+/* -------------------------
+   BUTTON
+------------------------- */
+.ws-center {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.ws-center a {
+    background: #04352d;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #1ed1b7;
+    text-decoration: none;
+    transition: 0.25s;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.411);
+    font-size: 2rem;
+}
+
+.ws-btn-primary:hover {
+    background: #1da591;
+    color: #13554a;
+}
+
+
+

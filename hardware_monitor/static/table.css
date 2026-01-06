@@ -1,0 +1,156 @@
+body {
+    background: #0c0f17;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-top: 90px;
+}
+
+#barChart, #lineChart {
+    width: 100% !important;
+    height: 350px !important;
+}
+
+.graphSection h3 {
+    text-align: center;
+}
+
+/* ===== GRAPH SECTION FIX ===== */
+.graphSection {
+    background: rgba(17, 25, 40, 0.8);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Graphs side-by-side */
+.graphs-row {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+.graphs-row h3{
+    color: #1ed1b7;
+}
+
+
+/* ===== Peripheral section (FIXED) ===== */
+#peripheralDetails {
+    width: 100%;
+    background: #000000;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+#peripheralDetails p {
+    margin-bottom: 16px;
+    color: #1ed1b7;
+    margin-left: 100px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.411);
+    text-align: justify;
+    font-size: 1rem;
+}
+
+/* ===== Table container ===== */
+.table-container {
+    width: 90%;
+    margin: 10px auto;
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    background: #0c0f17;
+    padding: 10px;
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+.table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #22946e;
+    border-radius: 5px;
+}
+
+/* ===== Table ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.tabletite {
+    text-align: center;
+    color: #22946e;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.411);
+}
+
+th, td {
+    padding: 14px 20px;
+    text-align: left;
+    transition: background 0.2s, color 0.2s;
+}
+
+th {
+    background-color: #151724;
+    color: #1ed1b7;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.411);
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+}
+
+tbody tr {
+    border-bottom: 1px solid #2c3138;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #0c0f17;
+}
+
+tbody tr:hover {
+    background-color: rgba(17, 25, 40, 0.8);
+}
+
+/* ===== High usage row ===== */
+.high-usage {
+    background-color: #3d1c1c !important;
+    color: #ff6b6b;
+    font-weight: 600;
+    border-left: 4px solid #ff4d4d;
+}
+
+/* ===== Hostname links ===== */
+td a {
+    color: #6F8D6A;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .graphs-row {
+        flex-direction: column;
+    }
+
+    th, td {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+
+.flexbox h4{
+color: #1ed1b7;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Work Stations</title>
+<link rel="stylesheet" href="/static/utilization.css">
+<script type="module" src="/static/utilization.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    {% include "header.html" %}
+    <script src="/static/header.js"></script>
+
+<section class="monitoring" id="monitoring">
+    <h2>WorkStation Monitoring</h2>
+    <div class="monitoring-grid"></div>
+</section>
+
+<div id="popup" class="popup">
+    <span class="close-popup">×</span>
+    <h2 id="popup-hostname"></h2>
+    <canvas id="lineChart"></canvas>
+    <ul id="peripherals-list"></ul>
+</div>
+<div id="overlay" class="overlay"></div>
+
+{% include 'footer.html' %}
+<script src="/static/footer.js"></script>
+
+<script src="/static/header.js"></script>
+
+
+<script>
+async function includeHTML() {
+    document.getElementById("header-placeholder").innerHTML = await (await fetch("/header.html")).text();
+}
+includeHTML();
+</script>
+</body>
+</html>

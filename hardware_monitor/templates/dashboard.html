@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hardware Monitoring Dashboard</title>
+<link rel="stylesheet" href="/static/dashboard.css" />
+<script type="module" src="/static/dashboard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+{% include "header.html" %}
+<script src="/static/header.js"></script>
+
+<section class="hero">
+    <div class="content">
+        <h1 class="title">Hardware Monitoring Dashboard</h1>
+        <p class="subtitle">Real-time system performance monitoring for your workstations.</p>
+    </div>
+</section>
+
+<section class="stats-section">
+    <div class="card-grid">
+        <div class="card">
+            <h3 class="card-title">CPU Usage</h3>
+            <canvas id="cpuGraph"></canvas>
+        </div>
+        <div class="card">
+            <h3 class="card-title">RAM Usage</h3>
+            <canvas id="ramGraph"></canvas>
+        </div>
+        <div class="card">
+            <h3 class="card-title">Disk Usage</h3>
+            <canvas id="diskGraph"></canvas>
+        </div>
+    </div>
+</section>
+
+<div class="ws-center">
+    <a href="/utilization" class="ws-btn-primary">View Workstations</a>
+</div>
+
+
+
+{% include 'footer.html' %}
+<script src="/static/footer.js"></script>
+
+<!-- <script>
+async function includeHTML() {
+    document.getElementById("header-placeholder").innerHTML = await (await fetch("/header.html")).text();
+}
+includeHTML();
+</script> -->
+
+
+
+
+    
+</body>
+</html>

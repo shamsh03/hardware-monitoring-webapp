@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>System Table</title>
+<link rel="stylesheet" href="/static/table.css">
+<script type="module" src="/static/table.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    {% include "header.html" %}
+    <script src="/static/header.js"></script>
+
+<section class="graphSection">
+
+    <!-- GRAPHS ROW (unchanged content, just wrapped) -->
+    <div class="graphs-row">
+        <div style="flex:1;">
+            <h3 id="graphTitle"></h3>
+            <canvas id="barChart"></canvas>
+        </div>
+
+        <div class="flexbox" style="flex:1;">
+            <h4>History</h4>
+            <canvas id="lineChart"></canvas>
+        </div>
+    </div>
+
+    <!-- PERIPHERAL DETAILS BELOW GRAPHS -->
+    <div id="peripheralDetails"></div>
+
+</section>
+
+<h2 class="tabletite" style="margin-top: 10px; margin-bottom: 10px;">
+    System Utilization Table
+</h2>
+
+<section id="tableSection" class="table-container">
+    <table id="systemTable">
+        <thead>
+            <tr>
+                <th>Hostname</th>
+                <th>CPU (%)</th>
+                <th>RAM (%)</th>
+                <th>Disk (%)</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</section>
+
+{% include 'footer.html' %}
+<script src="/static/footer.js"></script>
+
+
+<script src="/static/header.js"></script>
+
+
+
+
+
+<script>
+async function includeHTML() {
+    document.getElementById("header-placeholder").innerHTML =
+        await (await fetch("/header.html")).text();
+}
+includeHTML();
+</script>
+
+</body>
+</html>

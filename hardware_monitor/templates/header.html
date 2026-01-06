@@ -1,0 +1,48 @@
+<!-- header.html -->
+
+<link rel="stylesheet" href="/static/header.css">
+<div class="header">
+    <div class="logo-name">
+        <h3><a href="/"> Hardware Monitoring System</a></h3>
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="nav-btn">Features ▼</button>
+            <div class="dropdown-content">
+                <a href="/table">System Table</a>
+                <a href="/utilization">WorkStations</a>
+                <!-- <a href="/utilization">Disk</a>
+                <a href="/utilization">Peripherals</a>  -->
+            </div>
+        </div>
+
+
+
+        <button id="toggleBtn">Loading...</button>
+
+
+
+
+
+
+            
+
+        <!-- <script>
+            document.getElementById("toggleBtn").onclick = async () => {
+                const res = await fetch("/api/collection/toggle", { method: "POST" });
+                const data = await res.json();
+                alert("Collection is now " + (data.collectionEnabled ? "ON" : "OFF"));
+            };
+            </script> -->
+        <!-- <a href="/logout" class="logout-btn">Logout</a> -->
+
+    </div>
+</div>
+
+
+
+    
+  
